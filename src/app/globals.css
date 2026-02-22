@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0a0f;
+  --color-bg-secondary: #111118;
+  --color-accent: #39ff14;
+  --color-secondary: #00e5ff;
+  --color-tertiary: #ff2d7b;
+  --color-text-primary: #e8e8e8;
+  --color-text-secondary: #7a7a8a;
+
+  --font-mono: "JetBrains Mono", "Fira Code", "Courier New", monospace;
+  --font-body: "DM Sans", system-ui, sans-serif;
+}
+
+/* Custom utilities */
+@utility glow-green {
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.15), 0 0 60px rgba(57, 255, 20, 0.05);
+}
+
+@utility glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.15), 0 0 60px rgba(0, 229, 255, 0.05);
+}
+
+@utility glow-pink {
+  box-shadow: 0 0 20px rgba(255, 45, 123, 0.15), 0 0 60px rgba(255, 45, 123, 0.05);
+}
+
+@utility text-glow-green {
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5), 0 0 30px rgba(57, 255, 20, 0.2);
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@utility animate-blink {
+  animation: blink 1.2s step-end infinite;
+}
+
+/* Scanline overlay */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+@utility animate-scanline {
+  animation: scanline 8s linear infinite;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection colour */
+::selection {
+  background: rgba(57, 255, 20, 0.3);
+  color: #e8e8e8;
+}
