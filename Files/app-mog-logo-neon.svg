@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <filter id="neonGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="subtleGlow">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#ff2d7b" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#39ff14" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#0d0d12" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="#0d0d12"/>
+  <rect width="512" height="512" rx="96" fill="url(#bgGlow)"/>
+  
+  <!-- Decorative dots -->
+  <circle cx="56" cy="56" r="8" fill="#ff2d7b" opacity="0.25"/>
+  <circle cx="456" cy="456" r="8" fill="#39ff14" opacity="0.25"/>
+  <circle cx="456" cy="56" r="5" fill="#00e5ff" opacity="0.15"/>
+  <circle cx="56" cy="456" r="5" fill="#ff2d7b" opacity="0.15"/>
+  
+  <!-- APP text with neon glow -->
+  <text x="256" y="210" text-anchor="middle" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="110" font-weight="900" fill="#ff2d7b" filter="url(#neonGlow)" letter-spacing="-2">
+    APP
+  </text>
+  
+  <!-- Divider line -->
+  <line x1="100" y1="245" x2="412" y2="245" stroke="#5b5bff" stroke-width="2" opacity="0.3"/>
+  <circle cx="100" cy="245" r="3" fill="#5b5bff" opacity="0.5"/>
+  <circle cx="412" cy="245" r="3" fill="#5b5bff" opacity="0.5"/>
+  
+  <!-- MOG text with neon glow -->
+  <text x="256" y="360" text-anchor="middle" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="110" font-weight="900" fill="#39ff14" filter="url(#neonGlow)" letter-spacing="-2">
+    MOG
+  </text>
+  
+  <!-- Subtle tagline -->
+  <text x="256" y="430" text-anchor="middle" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="20" fill="#00e5ff" opacity="0.35" letter-spacing="8">
+    APPS THAT HIT DIFFERENT
+  </text>
+</svg>
