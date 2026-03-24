@@ -37,12 +37,8 @@ export default function SpeakSmartTerms() {
             
             <h3 className="font-display text-[1.1rem] font-bold mb-3 text-white/90 mt-6">Overview</h3>
             <p className="text-white/70 leading-relaxed mb-4">
-              SpeakSmart is an iOS application that converts voice recordings into text and provides AI-powered enhancement, correction, and rewriting capabilities. The application operates on a freemium model:
+              SpeakSmart is a free iOS application that converts voice recordings into text and provides AI-powered enhancement, correction, and rewriting capabilities. All features are available at no cost.
             </p>
-            <ul className="list-disc pl-6 text-white/70 space-y-2">
-              <li><strong>Free Tier:</strong> 20 text rewrites per calendar day</li>
-              <li><strong>Pro Subscription:</strong> $4.99/month for unlimited rewrites and advanced features</li>
-            </ul>
 
             <h3 className="font-display text-[1.1rem] font-bold mb-3 text-white/90 mt-6">Dual-Mode AI Processing</h3>
             <p className="text-white/70 leading-relaxed mb-4">
@@ -200,23 +196,6 @@ export default function SpeakSmartTerms() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-[1.5rem] font-bold mb-4 text-white">Subscription and Billing</h2>
-            
-            <h3 className="font-display text-[1.1rem] font-bold mb-3 text-white/90 mt-6">Pro Subscription</h3>
-            <ul className="list-disc pl-6 text-white/70 space-y-2">
-              <li>SpeakSmart Pro is available as a monthly subscription at $4.99/month</li>
-              <li>Payment is processed through Apple&apos;s App Store and subject to Apple&apos;s terms</li>
-              <li>Subscriptions automatically renew unless cancelled at least 24 hours before the renewal date</li>
-              <li>You can manage or cancel your subscription through your Apple ID account settings</li>
-            </ul>
-
-            <h3 className="font-display text-[1.1rem] font-bold mb-3 text-white/90 mt-6">Refunds</h3>
-            <p className="text-white/70 leading-relaxed">
-              All purchases are final. Refunds are handled by Apple according to their App Store refund policies. Contact Apple Support for refund requests.
-            </p>
-          </section>
-
-          <section className="mb-12">
             <h2 className="font-display text-[1.5rem] font-bold mb-4 text-white">Intellectual Property</h2>
             
             <h3 className="font-display text-[1.1rem] font-bold mb-3 text-white/90 mt-6">App Ownership</h3>
@@ -239,7 +218,6 @@ export default function SpeakSmartTerms() {
               <li>Violation of these Terms</li>
               <li>Fraudulent or illegal activity</li>
               <li>Abuse of the service or other users</li>
-              <li>Non-payment of subscription fees</li>
             </ul>
             <p className="text-white/70 leading-relaxed mt-4">
               Upon termination, your right to use SpeakSmart immediately ceases. All provisions of these Terms that by their nature should survive termination shall survive.

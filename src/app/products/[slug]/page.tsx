@@ -129,7 +129,7 @@ const products: Record<string, Product> = {
       'Voice-to-text transcription with real-time speech recognition',
       '6 rewriting tones: Professional, Casual, Funny, Polite, Concise, Detailed',
       '5 output formats: Email, Notes, Message, Memo, Social Post',
-      'On-device processing via Apple Intelligence (iOS 26+)',
+      'On-device processing via Apple Intelligence (requires iOS 18.1+ on iPhone 15 Pro, 15 Pro Max, or iPhone 16 series and later)',
       'OpenAI GPT-4o-mini fallback with your own API key',
       'Recording history with edit, reshare, and delete',
       'Siri Shortcuts integration for hands-free recording',

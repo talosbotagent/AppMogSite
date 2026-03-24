@@ -175,7 +175,7 @@ export default function SpeakSmartPrivacy() {
           <section className="mb-12">
             <h2 className="font-display text-[1.5rem] font-bold mb-4 text-white">Children&apos;s Privacy</h2>
             <p className="text-white/70 leading-relaxed">
-              SpeakSmart is not intended for children under 13. We do not knowingly collect data from children under 13.
+              SpeakSmart does not knowingly collect data from children. The app contains no features directed at children and does not require account creation or personal information to use.
             </p>
           </section>
 
