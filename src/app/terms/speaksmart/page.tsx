@@ -289,7 +289,7 @@ export default function SpeakSmartTerms() {
             <h2 className="font-display text-[1.5rem] font-bold mb-4 text-white">Contact</h2>
             <div className="bg-white/5 border border-white/10 rounded-lg p-6">
               <p className="font-display font-bold text-white mb-2">AppMog Ltd</p>
-              <p className="text-white/70">Email: <a href="mailto:legal@appmog.app" className="text-accent hover:underline">legal@appmog.app</a></p>
+              <p className="text-white/70">Email: <a href="mailto:info@appmog.app" className="text-accent hover:underline">info@appmog.app</a></p>
             </div>
           </section>
         </div>

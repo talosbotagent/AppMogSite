@@ -190,7 +190,7 @@ export default function SpeakSmartPrivacy() {
             <h2 className="font-display text-[1.5rem] font-bold mb-4 text-white">Contact Us</h2>
             <div className="bg-white/5 border border-white/10 rounded-lg p-6">
               <p className="font-display font-bold text-white mb-2">AppMog Ltd</p>
-              <p className="text-white/70">Email: <a href="mailto:privacy@appmog.com" className="text-accent hover:underline">privacy@appmog.com</a></p>
+              <p className="text-white/70">Email: <a href="mailto:info@appmog.app" className="text-accent hover:underline">info@appmog.app</a></p>
             </div>
           </section>
         </div>
