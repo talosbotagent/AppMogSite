@@ -6,7 +6,7 @@ const StatusBadge: React.FC<StatusBadgeProps> = ({ status }) => {
   const styles = {
     LIVE: 'text-accent',
     READY: 'text-yellow-400',
-    PENDING: 'text-white/40',
+    PENDING: 'text-orange-500',
   };
 
   return (

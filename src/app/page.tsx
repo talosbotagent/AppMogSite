@@ -13,7 +13,7 @@ export default function Home() {
     {
       name: 'WalletIntel',
       slug: 'walletintel',
-      status: 'LIVE' as const,
+      status: 'PENDING' as const,
       description: 'Track whale wallets. Real-time alerts. Token flow analysis.',
       category: 'Web3',
       gradient: 'linear-gradient(to bottom right, rgba(30,58,138,0.8), rgba(23,37,84,0.4), #000)',
@@ -29,7 +29,7 @@ export default function Home() {
     {
       name: 'VestingWatch',
       slug: 'vestingwatch',
-      status: 'LIVE' as const,
+      status: 'PENDING' as const,
       description: 'Token unlock tracker. Cliff events. Dump risk scoring.',
       category: 'Web3',
       gradient: 'linear-gradient(to bottom right, rgba(127,29,29,0.8), rgba(69,10,10,0.4), #000)',
@@ -45,10 +45,18 @@ export default function Home() {
     {
       name: 'SpeakSmart',
       slug: 'speaksmart',
-      status: 'PENDING' as const,
+      status: 'LIVE' as const,
       description: 'Voice-to-action. Speak commands, get instant execution.',
       category: 'Productivity',
       gradient: 'linear-gradient(to bottom right, rgba(112,26,117,0.8), rgba(74,4,78,0.4), #000)',
+    },
+    {
+      name: 'Mandate',
+      slug: 'mandate',
+      status: 'PENDING' as const,
+      description: 'AI-native strategy game. Write mandates. Agents execute on-chain.',
+      category: 'Web3 / Gaming',
+      gradient: 'linear-gradient(to bottom right, rgba(180,83,9,0.8), rgba(120,53,15,0.4), #000)',
     },
   ];
 

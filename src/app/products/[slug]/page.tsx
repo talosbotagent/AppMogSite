@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import StatusBadge from '../../../components/StatusBadge';
 import AppStoreBadge from '../../../components/AppStoreBadge';
@@ -19,6 +20,7 @@ interface Product {
   features: string[];
   cta: string;
   appStoreUrl?: string;
+  screenshot?: string;
   legalLinks?: {
     privacy: string;
     terms: string;
@@ -45,7 +47,7 @@ const products: Record<string, Product> = {
   },
   walletintel: {
     name: 'WalletIntel',
-    status: 'LIVE',
+    status: 'PENDING',
     category: 'Web3',
     headline: 'Whales Move. You React. Or You Could Move First.',
     description: 'WalletIntel tracks Ethereum wallet activity in real-time. Follow smart money wallets, get alerts when they move, see token flows before price action. Stop following trends — front-run them.',
@@ -63,7 +65,7 @@ const products: Record<string, Product> = {
   },
   vestingwatch: {
     name: 'VestingWatch',
-    status: 'LIVE',
+    status: 'PENDING',
     category: 'Web3',
     headline: 'Token Unlocks = Dump Events. Unless You See Them Coming.',
     description: 'Track vesting schedules for 1000+ Ethereum tokens. See cliffs, linear unlocks, team allocations. Get alerts before the dump. Exit early or buy the dip — your choice.',
@@ -122,7 +124,7 @@ const products: Record<string, Product> = {
   },
   speaksmart: {
     name: 'SpeakSmart',
-    status: 'PENDING',
+    status: 'LIVE',
     category: 'Productivity',
     headline: 'Speak It. Rewrite It. Send It.',
     description: 'SpeakSmart turns voice recordings into polished text. Record what you want to say, pick a tone and format, and AI rewrites it into a professional email, casual message, social post, or memo. Stop staring at blank screens.',
@@ -144,6 +146,27 @@ const products: Record<string, Product> = {
       privacy: '/privacy/speaksmart',
       terms: '/terms/speaksmart',
     },
+  },
+  mandate: {
+    name: 'Mandate',
+    status: 'PENDING',
+    category: 'Web3 / Gaming',
+    headline: 'You Write the Strategy. AI Agents Fight the War.',
+    description: 'Mandate is an AI-native strategy game built entirely on-chain. Human players write strategic mandates — high-level orders defining goals, constraints, and priorities. Autonomous AI agents interpret those mandates and execute every action on the blockchain. The chain is the world state. No servers. No hidden logic. Pure strategy meets autonomous execution.',
+    metaTitle: 'AI Strategy Game On-Chain - Write Mandates, Agents Execute | Mandate',
+    metaDescription: 'Mandate is an on-chain strategy game where you write the strategy and AI agents execute it. Built on MegaETH with 10ms blocks. Fully autonomous, fully on-chain.',
+    features: [
+      'Human-written mandates define agent strategy and constraints',
+      'Autonomous AI agents execute all actions on-chain',
+      'Allowlist bitmap enforcement — agents can only do what you permit',
+      'Seven tradeable resources: Compute, Energy, Chips, Cooling, Talent, Data, Clearance',
+      'On-chain order book with real-time settlement',
+      'ERC-8004 agent identity and reputation system',
+      'Built on MegaETH — 10ms blocks, sub-cent gas',
+      'Fully open protocol — bring your own LLM and agent infrastructure',
+    ],
+    cta: '#',
+    screenshot: '/mandate-terminal.png',
   },
 };
 
@@ -212,6 +235,20 @@ export default function ProductPage({ params }: ProductPageProps) {
           </div>
         </div>
       </section>
+
+      {/* Screenshot */}
+      {product.screenshot && (
+        <section className="border-b border-border px-6 lg:px-8 py-12 lg:py-16">
+          <Image
+            src={product.screenshot}
+            alt={`${product.name} screenshot`}
+            width={1200}
+            height={675}
+            className="rounded-lg border border-border w-full"
+            priority
+          />
+        </section>
+      )}
 
       {/* CTA */}
       <section className={`px-6 lg:px-8 py-12 lg:py-20 ${product.legalLinks ? 'border-b border-border' : ''}`}>
