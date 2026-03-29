@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import StatusBadge from '../../../components/StatusBadge';
+import AppStoreBadge from '../../../components/AppStoreBadge';
 
 interface ProductPageProps {
   params: { slug: string };
@@ -17,6 +18,7 @@ interface Product {
   metaDescription: string;
   features: string[];
   cta: string;
+  appStoreUrl?: string;
   legalLinks?: {
     privacy: string;
     terms: string;
@@ -93,7 +95,8 @@ const products: Record<string, Product> = {
       'Apple Intelligence integration for categorization',
       '100% on-device processing — zero cloud uploads',
     ],
-    cta: 'https://apps.apple.com/app/photoblitz',
+    cta: 'https://apps.apple.com/us/app/photo-blitz/id6760919347',
+    appStoreUrl: 'https://apps.apple.com/us/app/photo-blitz/id6760919347',
     legalLinks: {
       privacy: '/privacy/photo-blitz',
       terms: '/terms/photo-blitz',
@@ -135,7 +138,8 @@ const products: Record<string, Product> = {
       'Siri Shortcuts integration for hands-free recording',
       'API key stored securely in iOS Keychain',
     ],
-    cta: 'https://speaksmart.appmog.studio',
+    cta: 'https://apps.apple.com/us/app/speaksmart-voice-to-text-ai/id6760949048',
+    appStoreUrl: 'https://apps.apple.com/us/app/speaksmart-voice-to-text-ai/id6760949048',
     legalLinks: {
       privacy: '/privacy/speaksmart',
       terms: '/terms/speaksmart',
@@ -211,19 +215,24 @@ export default function ProductPage({ params }: ProductPageProps) {
 
       {/* CTA */}
       <section className={`px-6 lg:px-8 py-12 lg:py-20 ${product.legalLinks ? 'border-b border-border' : ''}`}>
-        <a
-          href={product.cta}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`inline-flex items-center gap-3 px-8 py-3 font-display text-[0.8rem] font-bold tracking-wider uppercase transition-all duration-300 rounded-full ${
-            product.status === 'LIVE'
-              ? 'bg-accent text-bg hover:bg-fg'
-              : 'bg-surface text-white/40 border border-border cursor-default'
-          }`}
-        >
-          {product.status === 'LIVE' ? 'LAUNCH APP' : 'COMING SOON'}
-          {product.status === 'LIVE' && <span>&rarr;</span>}
-        </a>
+        <div className="flex flex-col sm:flex-row items-start gap-6">
+          <a
+            href={product.cta}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`inline-flex items-center gap-3 px-8 py-3 font-display text-[0.8rem] font-bold tracking-wider uppercase transition-all duration-300 rounded-full ${
+              product.status === 'LIVE'
+                ? 'bg-accent text-bg hover:bg-fg'
+                : 'bg-surface text-white/40 border border-border cursor-default'
+            }`}
+          >
+            {product.status === 'LIVE' ? 'LAUNCH APP' : 'COMING SOON'}
+            {product.status === 'LIVE' && <span>&rarr;</span>}
+          </a>
+          {product.appStoreUrl && (
+            <AppStoreBadge url={product.appStoreUrl} />
+          )}
+        </div>
       </section>
 
       {/* Legal Links */}

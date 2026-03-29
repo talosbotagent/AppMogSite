@@ -5,6 +5,7 @@ export type BlogPost = {
   date: string;
   content: string;
   keywords: string[];
+  appStoreUrl?: string;
 };
 
 export const blogPosts: BlogPost[] = [
@@ -59,6 +60,7 @@ Apple Intelligence represents a fundamental shift in photo management. For the f
 
 The result? Photo cleanup that finally feels modern. No more choosing between privacy and intelligence.`,
     keywords: ['Apple Intelligence photos', 'Apple Intelligence photo management', 'iOS 26 photo features', 'on-device AI photos'],
+    appStoreUrl: 'https://apps.apple.com/us/app/photo-blitz/id6760919347',
   },
   {
     slug: 'why-iphone-storage-always-full',
@@ -101,6 +103,7 @@ Delete as you go. Set a weekly 5-minute cleanup reminder. Use Shared Albums for 
 
 The people who never see "Storage Full" notifications aren't magic — they just have systems that work.`,
     keywords: ['iPhone storage full', 'iPhone storage full fix', 'what takes up iPhone storage', 'free up iPhone space'],
+    appStoreUrl: 'https://apps.apple.com/us/app/photo-blitz/id6760919347',
   },
   {
     slug: 'how-to-bulk-delete-photos-iphone',
@@ -137,6 +140,7 @@ Photos scroll down like Space Invaders aliens. Tap to delete. Score points. Beat
 
 **Which to choose:** Native for under 100 photos. Desktop for one-time deep cleans. AI apps for thousands of duplicates. Photo Blitz if you've tried and quit from boredom.`,
     keywords: ['bulk delete photos iPhone', 'delete multiple photos iPhone', 'iPhone photo cleanup', 'clear iPhone storage'],
+    appStoreUrl: 'https://apps.apple.com/us/app/photo-blitz/id6760919347',
   },
   {
     slug: 'best-photo-cleanup-apps-iphone-2026',
@@ -187,6 +191,7 @@ Arcade-style Space Invaders gameplay. Apple Intelligence integration. Campaign m
 **Best for Fun:** Photo Blitz
 **Best Free:** Native Photos App`,
     keywords: ['best photo cleanup app iPhone', 'iPhone photo cleaner app', 'photo organizer app iPhone', 'delete duplicate photos iPhone'],
+    appStoreUrl: 'https://apps.apple.com/us/app/photo-blitz/id6760919347',
   },
   {
     slug: 'gamification-productivity',
@@ -227,5 +232,6 @@ Speed forces quick decisions. Gameplay distracts from the chore. Competition pro
 
 The shift from "I should do this" to "I want to do this" — that's where productivity lives.`,
     keywords: ['gamification productivity', 'gamified productivity apps', 'game-based productivity', 'productivity psychology'],
+    appStoreUrl: 'https://apps.apple.com/us/app/photo-blitz/id6760919347',
   },
 ];

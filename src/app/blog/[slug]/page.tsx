@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { blogPosts } from '@/lib/blogPosts';
+import AppStoreBadge from '@/components/AppStoreBadge';
 
 interface BlogPostPageProps {
   params: { slug: string };
@@ -71,6 +72,13 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             </p>
           );
         })}
+
+        {post.appStoreUrl && (
+          <div className="mt-12 pt-8 border-t border-border">
+            <p className="text-white/40 text-sm uppercase tracking-[0.15em] mb-4">Try Photo Blitz</p>
+            <AppStoreBadge url={post.appStoreUrl} />
+          </div>
+        )}
       </article>
 
       {/* Back */}
